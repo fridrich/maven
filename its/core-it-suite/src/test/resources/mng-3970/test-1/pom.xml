@@ -22,10 +22,10 @@ under the License.
 
   <groupId>org.apache.maven.its.mng3970</groupId>
   <artifactId>test</artifactId>
-  <version>0.3</version>
+  <version>0.2</version>
 
   <name>Maven Integration Test :: MNG-3970</name>
-  <description>Test that dependencies can be resolved from remote repositories defined by (active) profiles in settings.xml.</description>
+  <description>Test that dependencies can be resolved from remote repositories defined by (active) profiles in the POM.</description>
 
   <dependencies>
     <dependency>
@@ -53,4 +53,25 @@ under the License.
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>mng-3970</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <releases>
+            <checksumPolicy>ignore</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>false</enabled>
+          </snapshots>
+          <id>maven-core-it</id>
+          <url>@baseurl@/repo</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
 </project>

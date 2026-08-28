@@ -39,7 +39,7 @@ public class MavenITmng3970DepResolutionFromProfileReposTest extends AbstractMav
     public void testitFromPom() throws Exception {
         // requiresMavenVersion("[2.0,3.0-alpha-1),[3.0-beta-1,)");
 
-        Path testDir = extractResources("mng-3970/test-2");
+        Path testDir = extractResources("mng-3970/test-1");
 
         Verifier verifier = newVerifier(testDir);
         verifier.setAutoclean(false);
@@ -59,7 +59,7 @@ public class MavenITmng3970DepResolutionFromProfileReposTest extends AbstractMav
      */
     @Test
     public void testitFromSettings() throws Exception {
-        Path testDir = extractResources("mng-3970/test-3");
+        Path testDir = extractResources("mng-3970/test-2");
 
         Verifier verifier = newVerifier(testDir);
         verifier.setAutoclean(false);

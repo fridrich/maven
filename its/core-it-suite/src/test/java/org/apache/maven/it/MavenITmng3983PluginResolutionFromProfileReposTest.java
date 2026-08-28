@@ -61,7 +61,7 @@ public class MavenITmng3983PluginResolutionFromProfileReposTest extends Abstract
      */
     @Test
     public void testitFromSettings() throws Exception {
-        Path testDir = extractResources("mng-3983/test-3");
+        Path testDir = extractResources("mng-3983/test-2");
 
         Verifier verifier = newVerifier(testDir);
         verifier.setForkJvm(true); // Don't lock up plugin files in class loader within current JVM
